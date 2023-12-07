@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Simple Shape Viewer</title>
+
+        <style>
+            body {
+                height: calc(100vh - 10px);
+                margin: 0;
+                padding: 5px;
+            }
+
+            .fill {
+                width: 100%;
+                height: 100%;
+            }
+
+            #map {
+                position: relative;
+            }
+
+            canvas {
+                position: absolute;
+                border: 1px solid black;
+            }
+
+            #overlay {
+                position: absolute;
+            }
+
+            .row {
+                padding: 10px;
+            }
+        </style>
+
+        <script type="module" src="main.js"></script>
+    </head>
+    <body>
+        <div id="map" class="fill">
+            <canvas class="fill"></canvas>
+
+            <div id="overlay" class="fill">
+                <div class="row">
+                    <input
+                        type="file"
+                        id="add-shp"
+                        accept=".shp, .shx, .dbf"
+                        multiple
+                    />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

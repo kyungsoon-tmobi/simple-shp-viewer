@@ -1,0 +1,13 @@
+{
+    "name": "simple-shp-viewer",
+    "version": "1.0.0",
+    "main": "main.js",
+    "scripts": {
+        "start": "serve -p 9090"
+    },
+    "devDependencies": {
+        "prettier": "^3.1.0",
+        "prettier-plugin-organize-imports": "^3.2.4",
+        "serve": "^14.2.1"
+    }
+}
