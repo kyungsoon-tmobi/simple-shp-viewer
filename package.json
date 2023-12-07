@@ -1,9 +1,11 @@
 {
     "name": "simple-shp-viewer",
     "version": "1.0.0",
+    "type": "module",
     "main": "main.js",
     "scripts": {
-        "start": "serve -p 9090"
+        "start": "serve -p 9090",
+        "test:shp-reader": "node tests/shp-reader.test.js"
     },
     "devDependencies": {
         "prettier": "^3.1.0",

@@ -1,5 +1,6 @@
 import { addButton } from './elements.js';
 import { readFile } from './file-utils.js';
+import ShpReader from './shp-reader.js';
 
 export function bindHandlers() {
     addButton.addEventListener('change', async ({ target }) => {
@@ -10,7 +11,10 @@ export function bindHandlers() {
         }
 
         const arrayBuffer = await readFile(files[0]);
-        const view = new DataView(arrayBuffer);
-        console.log(view.byteLength, view.getInt32(0));
+        const reader = new ShpReader(arrayBuffer);
+
+        for (const feature of reader.featureIterator()) {
+            console.log(feature);
+        }
     });
 }
